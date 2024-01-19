@@ -16,6 +16,7 @@ vim.keymap.set('n', '<leader>ca', function() vscode.call('editor.action.quickFix
 vim.keymap.set('n', '<leader>q', function() vscode.call('workbench.action.closeActiveEditor') end)
 vim.keymap.set('n', '<leader>ff', function() vscode.call('workbench.action.quickOpen') end)
 vim.keymap.set('n', '<leader>fg', function() vscode.call('workbench.action.findInFiles') end)
+vim.keymap.set('n', '<leader>sp', function() vscode.call('workbench.action.replaceInFiles') end)
 vim.keymap.set('n', '<leader>[', function() vscode.call('editor.action.marker.prev') end)
 vim.keymap.set('n', '<leader>]', function() vscode.call('editor.action.marker.next') end)
 vim.keymap.set('n', '[c', function() vscode.call('editor.action.dirtydiff.previous') end)
