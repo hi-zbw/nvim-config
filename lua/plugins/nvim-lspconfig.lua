@@ -47,12 +47,14 @@ return {
         vim.keymap.set('n', 'gd', ':Telescope lsp_definitions theme=dropdown<CR>', opts)
         -- vim.keymap.set('n', 'gd', ':Lspsaga goto_definition<CR>', opts)
         vim.keymap.set('n', 'gt', ':Lspsaga goto_type_definition<CR>', opts)
+        vim.keymap.set('n', 'fr', vim.lsp.buf.references)
         vim.keymap.set('n', 'gh', ':Lspsaga finder<CR>')
         vim.keymap.set('n', '<leader>e', ':Lspsaga show_line_diagnostics<CR>', opts)
         vim.keymap.set('n', '<leader>[', ':Lspsaga diagnostic_jump_prev<CR>', opts)
         vim.keymap.set('n', '<leader>]', ':Lspsaga diagnostic_jump_next<CR>', opts)
         vim.keymap.set('n', '<leader>rn', ':Lspsaga rename<CR>', opts)
         vim.keymap.set('n', '<leader>ca', ':Lspsaga code_action<CR>')
+        vim.keymap.set('n', '<leader>fc', ':Format<CR>', opts)
       end,
     })
 
