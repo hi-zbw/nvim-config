@@ -63,7 +63,6 @@ return {
       if not ok then
         return
       end
-
       illuminate.on_attach(client)
     end
 
@@ -119,6 +118,9 @@ return {
     lspconfig.eslint.setup({
       on_attach = on_attach,
       capabilities = capabilities,
+      settings = {
+        autoFixOnFormat = true,
+      }
     })
 
     lspconfig.stylelint_lsp.setup({
