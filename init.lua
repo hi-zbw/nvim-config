@@ -24,4 +24,3 @@ end
 
 require('lazy').setup('plugins')
 
-

@@ -13,6 +13,7 @@ vim.keymap.set('n', '<leader>6', function() vscode.call('workbench.action.openEd
 
 vim.keymap.set('n', '<leader>rn', function() vscode.call('editor.action.rename') end)
 vim.keymap.set('n', '<leader>ca', function() vscode.call('editor.action.quickFix') end)
+vim.keymap.set('n', '<leader>fr', function() vscode.call('editor.action.goToReferences') end)
 vim.keymap.set('n', '<leader>q', function() vscode.call('workbench.action.closeActiveEditor') end)
 vim.keymap.set('n', '<leader>ff', function() vscode.call('workbench.action.quickOpen') end)
 vim.keymap.set('n', '<leader>fg', function() vscode.call('workbench.action.findInFiles') end)

@@ -10,6 +10,9 @@ vim.cmd [[
   hi VertSplit guifg=#343d46 guibg=#343d46
 ]]
 
+-- 中文输入法切换问题
+vim.cmd [[autocmd InsertLeave * :silent !/opt/homebrew/bin/macism com.apple.keylayout.ABC]]
+
 -- 复制高亮
 vim.cmd [[
   augroup YankHighlight
@@ -18,13 +21,10 @@ vim.cmd [[
   augroup end
 ]]
 
--- 中文输入法切换问题
-vim.cmd [[autocmd InsertLeave * :silent !/opt/homebrew/bin/macism com.apple.keylayout.ABC]]
-
 -- 保存时自动格式化
--- vim.cmd [[
---   augroup FormatAutogroup
---     autocmd!
---     autocmd BufWritePost * silent! FormatWrite
---   augroup end
--- ]]
+vim.cmd [[
+  augroup FormatAutogroup
+    autocmd!
+    autocmd BufWritePost * FormatWrite
+  augroup end
+]]
