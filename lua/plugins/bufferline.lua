@@ -32,5 +32,6 @@ return {
 
     vim.api.nvim_set_keymap('n', '<leader>cl', ':BufferLineCloseLeft<CR>', opts)
     vim.api.nvim_set_keymap('n', '<leader>cr', ':BufferLineCloseRight<CR>', opts)
+    vim.api.nvim_set_keymap('n', '<leader>co', ':BufferLineCloseOthers<CR>', opts)
   end
 }

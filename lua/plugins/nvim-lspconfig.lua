@@ -55,7 +55,7 @@ return {
         vim.keymap.set('n', '<leader>]', ':Lspsaga diagnostic_jump_next<CR>', opts)
         vim.keymap.set('n', '<leader>rn', ':Lspsaga rename<CR>', opts)
         vim.keymap.set('n', '<leader>ca', ':Lspsaga code_action<CR>')
-        vim.keymap.set('n', '<leader>fc', ':Format<CR>', opts)
+        vim.keymap.set('n', '<leader>ft', ':Format<CR>', opts)
       end,
     })
 
@@ -73,6 +73,12 @@ return {
       on_attach = on_attach,
       capabilities = capabilities,
     })
+
+    lspconfig.volar.setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+    })
+
 
     lspconfig.angularls.setup({})
 
@@ -109,11 +115,6 @@ return {
     })
 
     lspconfig.gopls.setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
-    })
-
-    lspconfig.volar.setup({
       on_attach = on_attach,
       capabilities = capabilities,
     })
