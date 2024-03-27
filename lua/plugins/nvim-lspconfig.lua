@@ -44,7 +44,8 @@ return {
         local opts = { buffer = ev.buf }
 
         vim.keymap.set('n', 'K', ':Lspsaga hover_doc<CR>')
-        vim.keymap.set('n', 'gd', ':Telescope lsp_definitions theme=dropdown<CR>', opts)
+        vim.keymap.set('n', 'gd', ':Telescope lsp_definitions<CR>', opts)
+        -- vim.keymap.set('n', 'gd', ':Telescope lsp_definitions theme=dropdown<CR>', opts)
         -- vim.keymap.set('n', 'gd', ':Lspsaga goto_definition<CR>', opts)
         vim.keymap.set('n', 'gt', ':Lspsaga goto_type_definition theme=dropdown<CR>', opts)
         -- vim.keymap.set('n', 'fr', vim.lsp.buf.references)
@@ -78,7 +79,6 @@ return {
       on_attach = on_attach,
       capabilities = capabilities,
     })
-
 
     lspconfig.angularls.setup({})
 
